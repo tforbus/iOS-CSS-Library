@@ -1,0 +1,219 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="ios.css" />
+		<link rel="stylesheet" type="text/css" href="details.css" />
+	</head>
+	
+	<body>
+	
+	<div id="MainContainer">
+	
+		<!-- Request Information -->
+		<div id="Information">
+			<div class="Section">
+				<h1>Request Information</h1>
+				
+				<div class="Content">
+					<h2>Description</h2>
+					<ul class="TextInformation">
+						<li>
+							<div class="Label">Name</div>
+							<div class="Value">Tristin Forbus</div>
+						</li>
+						<li>
+							<div class="Label">Email</div>
+							<div class="Value">tforbus@mtmrecognition.com
+								<div class="Expandable">( + )</div>
+							</div>
+						</li>
+						<li>
+							<div class="Label">Department</div>
+							<div class="Value">Building</div>
+						</li>
+						<li>
+							<div class="Label">Request No.</div>
+							<div class="Value">123456</div>
+						</li>
+						<li>
+							<div class="Label">Description</div>
+							<div class="Value">Whatever
+								<div class="Expandable">( + )</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			
+				<div class="Content">
+					<h2>Priority</h2>
+						<div class="OptionsContainer">
+						<ul class="Options">
+							<li class="Project">
+								<img src="priority-images/project.png">
+								Project
+							</li>
+							<li class="Low">
+								<img src="priority-images/lowpriority.png">
+								Low
+							</li>
+							<li class="Medium Active">
+								<img src="priority-images/mediumpriority.png">
+								Medium
+							</li>
+							<li class="High">
+								<img src="priority-images/highpriority.png">
+								High
+							</li>
+						</ul>
+					</div>
+				</div>
+			
+				<div class="Content">
+					<h2>Status</h2>
+					<div class="ControlButtonsContainer">
+						<ul class="ControlButtons">
+							<li class="Active">
+								<div class="ControlButtonWrapper Active">
+									<div class="ControlButton Play Active"></div>
+								</div>
+								<div class="ControlLabel">Active</div>
+							</li>
+					
+							<li>
+								<div class="ControlButtonWrapper">
+									<div class="ControlButton Pause"></div>
+								</div>
+								<div class="ControlLabel">Suspended</div>
+							</li>
+						
+							<li>
+								<div class="ControlButtonWrapper">
+									<div class="ControlButton Stop"></div>
+								</div>
+								<div class="ControlLabel">Completed</div>
+							</li>
+							
+							<li>
+								<div class="ControlButtonWrapper">
+									<div class="ControlButton Eject Arrow"></div>
+									<div class="ControlButton Eject Dash"></div>
+								</div>
+								<div class="ControlLabel">Delete</div>
+							</li>
+						</ul>	
+					</div>
+					
+					<!--<div style="margin: 3.0em 0 0 0;"></div>
+					<div class="Button Delete">Delete Request</div>-->
+				</div>
+			</div>
+			
+			<div class="TabBarContainer">
+				<div class="TabBar">
+					<ul class="Tabs">
+						<li class="Active">Request Information</li>
+						<li>Request Comments</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		<!-- Assign Users -->
+		<div id="Assignment">
+			<div class="Section">
+				<h1>Assign Users</h1>
+				
+					<!-- No need to put a table view in Content -->
+					<ul class="TableView Mutable">
+						<li><div class="BoolBoxMutable Yes"><div class="Slider"></div>Assigned</div>Tristin Forbus</li>
+						<li><div class="BoolBoxMutable Yes"><div class="Slider"></div>Assigned</div>Cale Kennedy</li>
+						<li><div class="BoolBoxMutable No"><div class="Slider"></div>Not Assigned</div>Someone Else</li>
+						<li><div class="BoolBoxMutable No"><div class="Slider"></div>Not Assigned</div>Kevin Durant</li>
+						<li><div class="BoolBoxMutable No"><div class="Slider"></div>Not Assigned</div>James Harden</li>
+						<li><div class="BoolBoxMutable No"><div class="Slider"></div>Not Assigned</div>Russel Westbrook</li>
+						<li><div class="BoolBoxMutable Yes"><div class="Slider"></div>Assigned</div>Tristin Forbus</li>
+						<li><div class="BoolBoxMutable Yes"><div class="Slider"></div>Assigned</div>Cale Kennedy</li>
+						<li><div class="BoolBoxMutable No"><div class="Slider"></div>Not Assigned</div>Someone Else</li>
+						<li><div class="BoolBoxMutable No"><div class="Slider"></div>Not Assigned</div>Kevin Durant</li>
+						<li><div class="BoolBoxMutable No"><div class="Slider"></div>Not Assigned</div>James Harden</li>
+						<li><div class="BoolBoxMutable No"><div class="Slider"></div>Not Assigned</div>Russel Westbrook</li>
+						<li><div class="BoolBoxMutable Yes"><div class="Slider"></div>Assigned</div>Tristin Forbus</li>
+						<li><div class="BoolBoxMutable Yes"><div class="Slider"></div>Assigned</div>Cale Kennedy</li>
+						<li><div class="BoolBoxMutable No"><div class="Slider"></div>Not Assigned</div>Someone Else</li>
+						<li><div class="BoolBoxMutable No"><div class="Slider"></div>Not Assigned</div>Kevin Durant</li>
+						<li><div class="BoolBoxMutable No"><div class="Slider"></div>Not Assigned</div>James Harden</li>
+						<li><div class="BoolBoxMutable No"><div class="Slider"></div>Not Assigned</div>Russel Westbrook</li>
+						
+					</ul>
+			</div>
+		</div>
+		
+		<!-- Surveys -->
+		<div id="SurveyAndCommentsContainer">
+			<div class="Survey">
+				<div class="Section">
+					<h1>Survey Results</h1>
+
+						<ul class="TableView ReadOnly">
+							<li><div class="BoolBox Yes">Yes</div>Friendly?</li>
+							<li><div class="BoolBox Yes">No</div>Knowledgeable?</li>
+							<li><div class="BoolBox No">No</div>Listened?</li>
+							<li><div class="BoolBox No">No</div>Clean?</li>
+							<li><div class="BoolBox No">No</div>Did Lockout/Tagout?</li>
+						</ul>
+				</div>
+			</div>
+			
+			<!-- Switch with tab views -->
+			<div class="Comments">
+				<div class="Section">				
+					<h1>Additional Survey Comments</h1>
+						<div class="Content">
+							<p>
+								Here's a comment by someone. Apparently these 
+								will have a character limit of 140 or so, so 
+								probably this will never need to scroll.
+							</p>
+						</div>
+				</div>
+			</div>
+			
+			<!--<div class="Comments">
+				<div class="Section">
+					<h1>Request Comments</h1>
+					<div id="ChatWindowContainer">
+						<ul class="ChatWindow">
+							<li>
+								<div class="Name">Tristin</div>
+								<p>I left a comment. It was important.</p>
+							</li>
+							
+							<li>
+								<div class="Name">Tristin</div>
+								<p>I left a comment. It was even more important.</p>
+							</li>
+					
+							<li>
+								<div class="Name">Tristin</div>
+								<p>This one wasn't, and it was so long, too. Why can't 
+								I be more terse like the previous Tristins? Man, what 
+								has this world come to. I sure do ramble. Goodness.</p>
+							</li>
+					
+							<li>
+								<div class="Name">Tristin</div>
+								<p>This one wasn't, and it was so long, too. Why can't 
+								I be more terse like the previous Tristins? Man, what 
+								has this world come to. I sure do ramble. Goodness.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>-->
+		</div>
+
+		
+	</div>
+	</body>
+</html>

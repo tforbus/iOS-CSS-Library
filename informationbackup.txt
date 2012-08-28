@@ -1,0 +1,108 @@
+<!-- Request Information -->
+		<div id="Information">
+			<div class="Section">
+				<h1>Request Information</h1>
+				
+				<div class="Content">
+					<h2>Description</h2>
+					<ul class="TextInformation">
+						<li>
+							<div class="Label">Name</div>
+							<div class="Value">Tristin Forbus</div>
+						</li>
+						<li>
+							<div class="Label">Email</div>
+							<div class="Value">tforbus@mtmrecognition.com
+								<div class="Expandable">( + )</div>
+							</div>
+						</li>
+						<li>
+							<div class="Label">Department</div>
+							<div class="Value">Building</div>
+						</li>
+						<li>
+							<div class="Label">Request No.</div>
+							<div class="Value">123456</div>
+						</li>
+						<li>
+							<div class="Label">Description</div>
+							<div class="Value">Whatever
+								<div class="Expandable">( + )</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			
+				<div class="Content">
+					<h2>Priority</h2>
+						<div class="OptionsContainer">
+						<ul class="Options">
+							<li class="Project">
+								<img src="priority-images/project.png">
+								Project
+							</li>
+							<li class="Low">
+								<img src="priority-images/lowpriority.png">
+								Low
+							</li>
+							<li class="Medium Active">
+								<img src="priority-images/mediumpriority.png">
+								Medium
+							</li>
+							<li class="High">
+								<img src="priority-images/highpriority.png">
+								High
+							</li>
+						</ul>
+					</div>
+				</div>
+			
+				<div class="Content">
+					<h2>Status</h2>
+					<div class="ControlButtonsContainer">
+						<ul class="ControlButtons">
+							<li class="Active">
+								<div class="ControlButtonWrapper Active">
+									<div class="ControlButton Play Active"></div>
+								</div>
+								<div class="ControlLabel">Active</div>
+							</li>
+					
+							<li>
+								<div class="ControlButtonWrapper">
+									<div class="ControlButton Pause"></div>
+								</div>
+								<div class="ControlLabel">Suspended</div>
+							</li>
+						
+							<li>
+								<div class="ControlButtonWrapper">
+									<div class="ControlButton Stop"></div>
+								</div>
+								<div class="ControlLabel">Completed</div>
+							</li>
+							
+							<li>
+								<div class="ControlButtonWrapper">
+									<div class="ControlButton Eject Arrow"></div>
+									<div class="ControlButton Eject Dash"></div>
+								</div>
+								<div class="ControlLabel">Delete</div>
+							</li>
+						</ul>	
+					</div>
+				</div>
+			</div>
+			
+	
+			
+			
+			<div class="TabBarContainer">
+				<div class="TabBar">
+					<ul class="Tabs">
+						<li class="Active">Request Information</li>
+						<li>Request Comments</li>
+					</ul>
+				</div>
+			</div>
+		</div>

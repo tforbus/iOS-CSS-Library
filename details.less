@@ -1,0 +1,366 @@
+@import url("mixins.less");
+
+/* Body Wrapper ------------------------------------------------------------- */
+body {
+	background: #fff;
+}
+
+p {
+	line-height: 1.3em;
+}
+
+.ShrinkyText {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.EmailSubject {
+	.rounded(0.5em, 0.5em, 0.5em, 0.5em);
+	border: 1px solid #e7e7e7;
+	width: 90%;
+}
+
+.EmailBody {
+	.rounded(0.5em, 0.5em, 0.5em, 0.5em);
+	border: 1px solid #e7e7e7;
+	width: 90%;
+	height: 8em;
+	font-size: 1.0em;
+}
+
+
+
+#MainContainer {
+	background-color: #ffff00;
+	background-image:url('priority-images/light_toast.png');
+	height: 720px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 1280px;
+
+	/** Request Information Container **/
+	#Information {
+		border: 1px solid #000;
+		float: left;
+		height: 718px;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		width: 495px;
+		
+		#InformationContainer {
+			height: 613px;
+			overflow: auto;
+			
+			/* Description entry */
+			#tiDescVal {
+				//white-space: nowrap;
+				float: left;
+				display: block;
+				//overflow: hidden;
+				//text-overflow: ellipsis;
+				width: 85%;
+			}
+		}
+	}
+	
+	/** Chat Container **/	
+	#Chat {
+		background: #d5e0e8;
+		border: 1px solid #000;
+		float: left;
+		height: 718px;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		width: 495px;
+		
+		#ChatWindowContainer {
+			height: 560px;
+			overflow: auto;
+		}
+		
+		#ChatEntry {
+			.gradient(#fafafa, #c9c9c9);
+			border-top: 1px solid #c9c9c9;
+			overflow: hidden;
+			padding: 0.5em;
+			
+			#ChatEntryField {
+				.rounded(0.5em, 0.5em, 0.5em, 0.5em);
+				background: #fff;
+				border: 1px solid #c9c9c9;
+				float: left;
+				margin: 0 1.0em 0 0;
+				padding: 0.3em;
+				
+				input {
+					background: transparent;
+					border: 0;
+					font-size: 1.0em;
+					width: 300px;
+				}
+			}
+			
+			#ChatEntrySubmit {
+				background: transparent;
+				float: left;
+			}
+		}
+	}
+
+	/** Assigning Users Container **/
+	#Assignment {
+		background: #fff;
+		border: 1px solid #000;
+		border-left: 0;
+		border-right: 0;
+		float: left;
+		height: 718px;
+		margin: 0;
+		overflow: auto;
+		padding: 0;
+		position: relative;
+		width: 405px;
+	}
+	
+	#Survey {
+		border: 1px solid #000;
+		float: left;
+		height: 718px;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		width: 375px;
+	}
+}
+
+/* TableView Override ------------------------------------------------------- */
+.TableView {
+	&.Mutable {
+		li {
+			cursor: pointer;
+			overflow: hidden;
+			padding-top: 1.0em;
+			padding-bottom: 1.0em;
+		}
+	}
+	
+	&.ReadOnly {
+		li {
+			overflow: hidden;
+			padding-top: 1.0em;
+			padding-bottom: 1.0em;
+		}
+		
+	}
+}
+
+
+
+/* Horizontal Options Override ---------------------------------------------- */
+.Options {
+	li {	
+		text-align: center;
+		
+		&.Active {
+			&.Project {
+				.gradient(#3672d9, #65a2f7);
+			}
+			
+			&.Low {
+				.gradient(#36d967, #64f56c);
+			}
+			
+			&.Medium {
+				.gradient(#d99536, #f5ad64);
+			}		
+			
+			&.High {
+				.gradient(#d93c36, #f56764);
+			}
+		}
+		
+		img {
+			display: block;
+			height: 40px;
+			margin: 0.5em 1.0em;
+			width: 40px;
+		}
+	}
+}
+
+
+/* Boolbox override --------------------------------------------------------- */
+.BoolBox {
+	font-size: 0.6em;
+	width: auto;
+	margin-right: 0.9em;
+	min-width:7em;
+}
+
+.BoolBoxMutable {
+	font-size: 0.6em;
+	width: auto;
+	margin-right: 0.9em;
+	min-width: 10em;
+}
+
+/* TabBar override ---------------------------------------------------------- */
+.TabBarContainer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 900;
+	
+	&.Requests {
+		width: 497px;
+	}
+}
+
+/* Request controls --------------------------------------------------------- */
+/** from http://mediamilan.com/create-playback-buttons-with-just-css/ **/
+
+.ControlButtonsContainer {
+ 	clear: both;
+ 	overflow: hidden;
+}
+
+ .ControlButtons {
+ 	background-color: transparent;
+ 	color: #787878;
+ 	float: left;
+ 	font-size: 1.0em;
+ 	list-style: none;
+ 	margin: 0 auto;
+ 	padding: 0;
+ 	position: relative;
+ 	left: 50%;
+ 	text-align: center;
+ 	text-shadow: 0 1px #fff;
+
+ 	
+ 	li {
+ 		cursor: pointer;
+ 		display: block;
+ 		float: left;
+ 		margin: 0 1.0em;
+ 		position: relative;
+ 		right: 50%;
+ 		
+ 		&.Active {		
+ 			color: #657894;
+ 			text-shadow: 0 1px #fff;
+ 		}
+ 		
+ 		.ControlButtonWrapper {
+ 			.gradient(#fafafa, #c9c9c9);
+ 			.rounded(50%, 50%, 50%, 50%);
+ 			border: 3px solid #bababa;
+ 			cursor: pointer;
+ 			display: block;
+ 			height: 70px;
+ 			width: 70px;
+ 			
+ 			&.Active {
+ 				border: 3px solid #657894;
+ 			}
+ 		
+ 			.ControlButton {
+				border-style: solid;
+				display: block;
+				float: left;
+				height: 0;
+				margin: 0;
+				position: relative;
+				right: 50%;
+				width: 0;
+				text-indent: -9999px;
+
+				&.Play {
+					border-color:transparent transparent transparent #666;
+					border-width: 10px 0 10px 10px;
+					position: absolute;
+					top: 28px;
+					left: 33px;
+					
+					&.Active {
+						border-color: transparent transparent transparent #657894;
+					}
+				}
+
+				&.Pause {
+					border-color:transparent #666;
+					border-width:0 4px 0;
+					height:18px;
+					width:7px;
+					position: absolute;
+					top: 29px;
+					left: 31px;
+					
+					&.Active {
+						border-color: transparent #657894;
+					}
+				}
+
+				&.Stop {
+					border:7px solid #666;
+					margin:0;
+					position: absolute;
+					top: 31px;
+					left: 31px;
+					
+					&.Active {
+						border-color: #657894;
+					}
+				}
+				
+				&.Eject {
+					position: absolute;
+				
+					&.Arrow {
+						border-color:transparent transparent #666;
+						border-style:solid;
+						border-width:0 11px 11px;
+						float:left;
+						height:0;
+						text-indent:-9999px;
+						top: 28px;
+						left: 26px;
+						width:0;
+						
+						&.Active {
+							border-color: transparent transparent #657894;
+						}
+					}
+					
+					&.Dash {
+						border-color:transparent transparent #666;
+						border-style:solid;
+						border-width:0 0 4px;
+						float:left;
+						height:3px;
+						top: 39px;
+						left: 26px;
+						text-indent:-9999px;
+						width:22px;
+						
+						&.Active {
+							border-color: transparent transparent #657894;
+						}
+					}
+				}
+			}
+		}
+ 		
+ 		.ControlLabel {
+ 			clear: both;
+ 			display: block;
+ 			font-size: 1.0em;
+ 			font-weight: bold;
+ 			margin: 0.3em 0 0 0;
+ 		}	
+ 	}
+}

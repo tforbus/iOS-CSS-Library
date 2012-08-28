@@ -1,0 +1,298 @@
+/* ----------------------------------------------------------------------------
+  * Mix-Ins
+  * ------------------------------------------------------------------------- */
+/* Body Wrapper ------------------------------------------------------------- */
+body {
+  background: #fff;
+}
+#MainContainer {
+  background-color: #ffff00;
+  background-image: url('priority-images/light_toast.png');
+  height: 720px;
+  margin: 0;
+  padding: 0;
+  width: 1280px;
+  /** Request Information Container **/
+
+  /** Assigning Users Container **/
+
+  /** Survey and Comments Container **/
+
+}
+#MainContainer #Information {
+  border: 1px solid #000;
+  float: left;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 495px;
+  height: 720px;
+}
+#MainContainer #Assignment {
+  background: #fff;
+  border: 1px solid #000;
+  border-left: 0;
+  float: left;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+  position: relative;
+  width: 405px;
+  height: 720px;
+}
+#MainContainer #SurveyAndCommentsContainer {
+  background: #fff;
+  border: 1px solid #000;
+  border-left: 0;
+  float: left;
+  height: 720px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 375px;
+}
+#MainContainer #SurveyAndCommentsContainer .Survey {
+  background: #fff;
+  display: block;
+  height: auto;
+  /* Check with JS */
+
+  margin: 0;
+  padding: 0;
+}
+#MainContainer #SurveyAndCommentsContainer .Comments {
+  background: #fff;
+  display: block;
+  height: auto;
+  /* Change with JS (Depends on .Survey) */
+
+  margin: 0;
+  padding: 0;
+}
+#MainContainer #SurveyAndCommentsContainer .Comments p {
+  line-height: 1.5em;
+  padding: 0 1.2em;
+}
+#MainContainer #SurveyAndCommentsContainer .Comments #ChatWindowContainer {
+  height: 395px;
+  /* Change with JS (Depends on .Survey and h1 height)*/
+
+  overflow: auto;
+}
+/* TableView Override ------------------------------------------------------- */
+.TableView.Mutable li {
+  cursor: pointer;
+  overflow: hidden;
+  padding-top: 1.0em;
+  padding-bottom: 1.0em;
+}
+.TableView.ReadOnly li {
+  overflow: hidden;
+  padding-top: 1.0em;
+  padding-bottom: 1.0em;
+}
+/* Horizontal Options Override ---------------------------------------------- */
+.Options li {
+  text-align: center;
+}
+.Options li.Active.Project {
+  background: #65a2f7;
+  background: -moz-linear-gradient(top, #3672d9, #65a2f7);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#3672d9), to(#65a2f7));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+}
+.Options li.Active.Low {
+  background: #64f56c;
+  background: -moz-linear-gradient(top, #36d967, #64f56c);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#36d967), to(#64f56c));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+}
+.Options li.Active.Medium {
+  background: #f5ad64;
+  background: -moz-linear-gradient(top, #d99536, #f5ad64);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#d99536), to(#f5ad64));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+}
+.Options li.Active.High {
+  background: #f56764;
+  background: -moz-linear-gradient(top, #d93c36, #f56764);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#d93c36), to(#f56764));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+}
+.Options li img {
+  display: block;
+  height: 40px;
+  margin: 0.5em 1.0em;
+  width: 40px;
+}
+/* Boolbox override --------------------------------------------------------- */
+.BoolBox {
+  font-size: 0.6em;
+  width: auto;
+  margin-right: 0.9em;
+  min-width: 7em;
+}
+.BoolBoxMutable {
+  font-size: 0.6em;
+  width: auto;
+  margin-right: 0.9em;
+  min-width: 10em;
+}
+/* TabBar override ---------------------------------------------------------- */
+.TabBarContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* Request controls --------------------------------------------------------- */
+/** from http://mediamilan.com/create-playback-buttons-with-just-css/ **/
+.ControlButtonsContainer {
+  clear: both;
+  overflow: hidden;
+}
+.ControlButtons {
+  background-color: transparent;
+  color: #787878;
+  float: left;
+  font-size: 1.0em;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  text-align: center;
+  text-shadow: 0 1px #fff;
+}
+.ControlButtons li {
+  cursor: pointer;
+  display: block;
+  float: left;
+  margin: 0 1.0em;
+  position: relative;
+  right: 50%;
+}
+.ControlButtons li.Active {
+  color: #657894;
+  text-shadow: 0 1px #fff;
+}
+.ControlButtons li .ControlButtonWrapper {
+  background: #c9c9c9;
+  background: -moz-linear-gradient(top, #fafafa, #c9c9c9);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#c9c9c9));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  border-radius: 50% 50% 50% 50%;
+  -webkit-border-top-left-radius: 50%;
+  -webkit-border-top-right-radius: 50%;
+  -webkit-border-bottom-right-radius: 50%;
+  -webkit-border-bottom-left-radius: 50%;
+  -moz-border-radius: 50% 50% 50% 50%;
+  border: 3px solid #bababa;
+  cursor: pointer;
+  display: block;
+  height: 70px;
+  width: 70px;
+}
+.ControlButtons li .ControlButtonWrapper.Active {
+  border: 3px solid #657894;
+}
+.ControlButtons li .ControlButtonWrapper .ControlButton {
+  border-style: solid;
+  display: block;
+  float: left;
+  height: 0;
+  margin: 0;
+  position: relative;
+  right: 50%;
+  width: 0;
+  text-indent: -9999px;
+}
+.ControlButtons li .ControlButtonWrapper .ControlButton.Play {
+  border-color: transparent transparent transparent #666;
+  border-width: 10px 0 10px 10px;
+  position: absolute;
+  top: 28px;
+  left: 33px;
+}
+.ControlButtons li .ControlButtonWrapper .ControlButton.Play.Active {
+  border-color: transparent transparent transparent #657894;
+}
+.ControlButtons li .ControlButtonWrapper .ControlButton.Pause {
+  border-color: transparent #666;
+  border-width: 0 4px 0;
+  height: 18px;
+  width: 7px;
+  position: absolute;
+  top: 29px;
+  left: 31px;
+}
+.ControlButtons li .ControlButtonWrapper .ControlButton.Pause.Active {
+  border-color: transparent transparent transparent #657894;
+}
+.ControlButtons li .ControlButtonWrapper .ControlButton.Stop {
+  border: 7px solid #666;
+  margin: 0;
+  position: absolute;
+  top: 31px;
+  left: 31px;
+}
+.ControlButtons li .ControlButtonWrapper .ControlButton.Stop.Active {
+  border-color: transparent transparent transparent #657894;
+}
+.ControlButtons li .ControlButtonWrapper .ControlButton.Eject {
+  position: absolute;
+}
+.ControlButtons li .ControlButtonWrapper .ControlButton.Eject.Arrow {
+  border-color: transparent transparent #666;
+  border-style: solid;
+  border-width: 0 11px 11px;
+  float: left;
+  height: 0;
+  text-indent: -9999px;
+  top: 28px;
+  left: 26px;
+  width: 0;
+}
+.ControlButtons li .ControlButtonWrapper .ControlButton.Eject.Arrow.Active {
+  border-color: transparent transparent transparent #657894;
+}
+.ControlButtons li .ControlButtonWrapper .ControlButton.Eject.Dash {
+  border-color: transparent transparent #666;
+  border-style: solid;
+  border-width: 0 0 4px;
+  float: left;
+  height: 3px;
+  top: 39px;
+  left: 26px;
+  text-indent: -9999px;
+  width: 22px;
+}
+.ControlButtons li .ControlButtonWrapper .ControlButton.Eject.Dash.Active {
+  border-color: transparent transparent transparent #657894;
+}
+.ControlButtons li .ControlLabel {
+  clear: both;
+  display: block;
+  font-size: 1.0em;
+  font-weight: bold;
+  margin: 0.3em 0 0 0;
+}

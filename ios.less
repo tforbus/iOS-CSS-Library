@@ -1,0 +1,574 @@
+@import url("mixins.less");
+
+@sectionBackgroundColor: #ddd;
+@subsectionHeaderColor: #555566;
+@backgroundImage: 'priority-images/light_toast.png';
+
+ /* ----------------------------------------------------------------------------
+  * Global views
+  * ------------------------------------------------------------------------- */
+ body {
+ 	background-color: @sectionBackgroundColor;
+  	background-image:url(@backgroundImage);
+	color: #111;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12pt;
+	font-weight: none;
+	margin: 0;
+	padding: 0;
+ }
+ 
+ input {
+ 	background: inherit;
+ 	border: 0;
+ 	font-size: 1.0em;
+ 	padding: 0.2em;
+ }
+ 
+ 
+ .Section {
+	background: inherit;
+ 	padding: 0;
+ 	width: 100%;
+ 
+ 	/* Section header */
+ 	h1 {
+		background-color: #657894;
+		.gradient(#a2abdb, #657894);
+		border-bottom: 2px ridge #657894;
+		color: #fff;
+		font-size: 1.4em;
+		font-weight: bold;
+		letter-spacing: 1px;
+		margin: 0;
+		padding: 0.2em 0;
+		position: relative;
+		text-align: center;
+		text-shadow: 0 2px #333;
+ 	}
+ 
+ 	/* Subsection title */
+ 	h2 {
+ 		color: @subsectionHeaderColor;
+ 		font-size: 1.3em;
+ 		font-weight: bold;
+ 		margin: 1.0em 0 0.5em 0;
+ 		padding: 0;
+ 		position: relative;
+ 		text-align: left;
+ 		text-shadow: 0 1px #fff;
+ 	}
+ 	
+ 	/* Smaller Text */
+ 	h3 {
+ 		color: @subsectionHeaderColor;
+ 		font-size: 0.9em;
+ 		font-weight: none;
+ 		padding: 0;
+ 		text-align: center;
+ 		text-shadow: 0 1px #fff;
+ 		width: 100%;
+ 	}
+ 	
+ 	.Content {
+ 		background: inherit;
+ 		margin: 0;
+ 		padding: 0 2%;
+ 	}
+ 
+ }
+ 
+ 
+ 
+ /* ----------------------------------------------------------------------------
+  * Table View
+  * ------------------------------------------------------------------------- */
+ .TableView {
+	background-color: #ffffff;
+	color: #111;
+	font-weight: bold;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+	li {
+		border-bottom: 1px solid #e7e7e7;
+		display: block;
+		margin: 0;
+		padding: 0.6em 1.0em;
+		position: relative;
+		text-align: left;
+	}
+ }
+ 
+ /* ----------------------------------------------------------------------------
+  * SMS
+  * ------------------------------------------------------------------------- */
+ .ChatWindow {
+ 	background-color: #d5e0e8;
+ 	list-style: none;
+ 	margin: 0;
+ 	overflow: hidden;
+ 	padding: 0;
+ 	
+ 	li {
+ 		width: 60%;
+ 		
+ 		.rounded(0.5em, 0.5em, 0.5em, 0.5em);
+ 		margin: 1.0em;
+ 		padding: 0.8em;
+ 		position: relative;
+ 		width: 60%;
+ 			
+ 		p {
+ 			margin: 0;
+ 			padding: 0 0.1em;
+ 		}
+ 			
+ 		.Name {
+ 			font-weight: bold;
+ 			margin-bottom: 0.3em;
+ 		}
+ 	}
+ 	
+ 	li:nth-child(odd) {
+ 			.boxshadow(2px, 2px, 0px, #888);
+			.gradient(#fff, #d6d6d6);
+			background-color: #fff;
+			border: 1px solid #d6d6d6;
+			float: left;
+
+			.Name { border-bottom: 2px ridge rgba(255, 255, 255, 0.5); }
+	}
+	
+	li:nth-child(even) {
+			.boxshadow(-2px, 2px, 0px, #888);
+			.gradient(#fff, #8cdb3d);
+			background-color: #8cdb3d;
+			border: 1px solid #8cdb3d;
+			float: right;
+
+			.Name { border-bottom: 2px ridge rgba(160, 239, 81, 0.5); }
+	}
+ }
+ 
+/* ----------------------------------------------------------------------------
+ * Horizontal Options Menu
+ * ------------------------------------------------------------------------- */
+ .OptionsContainer {
+ 	clear: both;
+ 	overflow: hidden;
+ }
+ 
+ .Options {
+ 	background-color: transparent;
+ 	color: #787878;
+ 	float: left;
+ 	list-style: none;
+ 	margin: 0 auto;
+ 	padding: 0;
+ 	position: relative;
+ 	left: 50%;
+ 	text-shadow: 0 1px #fff;
+
+ 	
+ 	li {
+ 		.gradient(#fafafa, #c9c9c9);
+ 		border: 1px solid #bababa;
+ 		border-right: 0;
+ 		cursor: pointer;
+ 		display: block;
+ 		float: left;
+ 		margin: 0;
+ 		padding: 0.8em;
+ 		position: relative;
+ 		right: 50%;
+ 		width: auto;
+ 		
+ 		&.Active {
+ 			.gradient(#3672d9, #65a2f7);
+ 			color: #fff;
+ 			text-shadow: 0 1px #333;
+ 		}
+ 	}
+ 	
+ 	li:first-child {
+ 		.rounded(0.5em, 0, 0, 0.5em);
+ 		border-left: 1px solid #bababa;
+ 		border-right: 0;
+ 	}
+ 	
+ 	li:last-child {
+ 		.rounded(0, 0.5em, 0.5em, 0);
+ 		border-right: 1px solid #bababa;
+ 	}
+ }
+ 
+ /* ----------------------------------------------------------------------------
+ * Text display
+ * Things to change per layout: widths of Label/Value
+ * ------------------------------------------------------------------------- */
+ 
+ .TextInformation {
+ 	font-size: 1.0em;
+ 	list-style: none;
+ 	margin: 0.5em 0;
+ 	padding: 0;
+ 	position: relative;
+ 	
+ 	li {
+ 		background-color: #fff;
+ 		border: 1px solid #e7e7e7;
+ 		border-bottom: 0;
+ 		color: #111;
+ 		font-size: 1.0em;
+ 		overflow: hidden;
+ 		margin: 0;
+ 		padding: 0;
+ 		width: 100%;
+ 	}
+ 	
+ 	li:first-child {
+ 		.rounded(0.5em, 0.5em, 0, 0);
+ 	}
+ 	
+ 	li:last-child {
+ 		.rounded(0, 0, 0.5em, 0.5em);
+ 		border-bottom: 1px solid #e7e7e7;
+ 	}
+ 	
+ 	.Label {
+ 		color: #111;
+ 		float: left;
+ 		font-weight: bold;
+ 		margin: 2%;
+ 		width: 25%;
+ 	}
+ 	
+ 	.Value {
+ 		color: #657894;
+ 		float: left;
+ 		font-weight: none;
+ 		margin: 2% 0;
+ 		width: 71%;
+ 		
+ 		.Expandable {
+ 			color: #657894;
+ 			cursor: pointer;
+ 			font-weight: bold;
+ 			float: right;
+ 			height: 1.0em;
+ 			margin-right: 0.5em;
+ 			text-align: center;
+ 		}
+ 		
+ 	}
+ }
+ 
+ 
+ /* ----------------------------------------------------------------------------
+ * Round content
+ * ------------------------------------------------------------------------- */
+ 
+ .RoundedArea {
+ 	.rounded(0.5em, 0.5em, 0.5em, 0.5em);
+ 	background-color: #fff;
+ 	
+ 	p {
+ 		padding: 0.2em 1.0em;
+ 	}
+ }
+ 
+ 
+ /* ----------------------------------------------------------------------------
+ * Glossy Buttons
+ * ------------------------------------------------------------------------- */
+ 
+ .Button {
+ 	.rounded(0.5em, 0.5em, 0.5em, 0.5em);
+ 	border: 1px solid #000;
+ 	color: #fff;
+ 	cursor: pointer;
+ 	font-size: 1.1em;
+ 	font-weight: bold;
+ 	padding: 0.5em;
+ 	text-align: center;
+ 	text-shadow: rgba(0, 0, 0, 0.5);
+ 	width: auto;
+ }
+ 
+ 	&.Delete {
+ 		.gradient(#e8a7aa, #d11f28);
+ 		border: 1px solid #a3292f;
+ 		text-shadow: rgba(0, 0, 0, 0.5);
+ 	}
+ 	
+ 	&.Submit {
+ 		.gradient(#85acde, #1e61c7);
+ 		border: 1px solid #3e61c7;
+ 		text-shadow: rgba(0, 0, 0, 0.5);
+ 	}
+ 
+ 
+ /* ----------------------------------------------------------------------------
+ * TabBar
+ * ------------------------------------------------------------------------- */
+ 
+ .TabBarContainer {
+ 	background-color: #111;
+ 	
+ 	.TabBar {
+ 		.gradient(#242424, #000);
+ 		border-top: 1px solid #111;
+ 		overflow: hidden;
+ 		padding: 0.5em 0;
+ 	
+ 		.Tabs {
+ 			background-color: transparent;
+ 			color: #fff;
+ 			float: left;
+ 			list-style: none;
+ 			margin: 0 auto;
+ 			padding: 0;
+ 			position: relative;
+ 			left: 50%;
+ 			text-shadow: 0 1px #111;
+
+ 	
+ 			li {
+ 				.rounded(0.5em, 0.5em, 0.5em, 0.5em);
+ 				border: 1px solid #111;
+ 				cursor: pointer;
+ 				display: block;
+ 				float: left;
+ 				margin: 0 0.2em;
+ 				padding: 1.0em;
+ 				position: relative;
+ 				right: 50%;
+ 				width: auto;
+ 			
+		 		&.Active {
+ 					.gradient(#3d3d3d, #242424);
+ 					color: #fff;
+ 					text-shadow: 0 1px #333;
+ 				}
+ 			}
+
+		}
+ 	}
+ }
+ 
+ 
+/* ----------------------------------------------------------------------------
+ * Active/Inactive display
+ * I intended this to be used for read-only data. 
+ * LiveBoolBox is intended for mutable data.
+ * ------------------------------------------------------------------------- */
+ 
+ .BoolBox {
+ 	.rounded(0.7em, 0.7em, 0.7em, 0.7em);
+	.boxshadow(0px, 0px, 2px, rgba(0, 0, 0, 0.2));
+	backround: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	height: 1.4em;
+	width: auto;
+	float: left;
+	margin: 0 0.4em 0 0;
+	padding: 0 0.5em;
+	position: relative;
+	font-size: 0.8em;
+	text-align: center;
+
+
+	&.Yes {
+		.gradient(#4590e6, #2170de);
+		background-color: #00ff00;
+		color: #fff;
+	}
+
+	&.No {
+		.gradient(#eee, #ddd);
+		background-color: #ff0000;
+		color: #666;
+	}
+}
+
+
+ /* ----------------------------------------------------------------------------
+ * Active/Inactive display (mutable)
+ * -------------------------------------------------------------------------- */
+ 
+ .BoolBoxMutable {
+ 	.rounded(0.7em, 0.7em, 0.7em, 0.7em);
+	.boxshadow(0px, 0px, 2px, rgba(0, 0, 0, 0.2));
+	backround: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	height: 1.4em;
+	width: auto;
+	float: left;
+	margin: 0 0.4em 0 0;
+	padding: 0 0.5em;
+	position: relative;
+	font-size: 0.8em;
+	text-align: center;
+	
+	&.Yes {
+		.gradient(#4590e6, #2170de);
+		background-color: #00ff00;
+		color: #fff;
+		
+		.Slider {
+			.gradient(#e7e7e7, #f5f5f5);
+			.rounded(50%, 50%, 50%, 50%);
+			border: 1px solid rgba(0, 0, 0, 0.2);
+			height: 1.5em;
+			position: absolute;
+			right: -0.25em;
+			top: -0.25em;
+			width: 1.5em;
+		}
+	}
+	
+	&.No {
+		.gradient(#eee, #ddd);
+		background-color: #ff0000;
+		color: #666;
+		
+		.Slider {
+			.gradient(#e7e7e7, #f5f5f5);
+			.rounded(50%, 50%, 50%, 50%);
+			border: 1px solid rgba(0, 0, 0, 0.2);
+			height: 1.5em;
+			position: absolute;
+			left: -0.25em;
+			top: -0.25em;
+			width: 1.5em;
+		}
+	}
+ }
+ 
+ /* ----------------------------------------------------------------------------
+ * Popup
+ * -------------------------------------------------------------------------- */
+ .PopupContainer {
+ 	background: rgba(0, 0, 0, 0.5);
+ 	display: table;
+ 	height: 100%;
+ 	margin: 0;
+ 	overflow: visible;
+ 	padding: 0;
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100%;
+ 	z-index: 1000;
+ 	
+ 	.PopupContainerInner {
+ 		display: table-cell;
+ 		vertical-align: middle;
+ 		
+ 		.Popup {
+ 			.rounded(1em, 1em, 1em, 1em);
+ 			background-color: #e7e7e7;
+ 			border: 2px solid #fff;
+ 			height: 150px;
+ 			margin: 0 auto;
+ 			padding: 1.5em;
+ 			text-align: center;
+ 			width: 350px;
+ 			
+ 			&.Delete {
+ 				.gradient(#f5f5f5, #ff9187);
+ 				border-color: #cc0000;
+ 			
+ 				.PopupQuestion {
+ 					color: #111;
+ 					font-weight: bold;
+ 					font-size: 1.2em;
+ 					text-shadow: 0 1px #fff;
+ 				}
+ 			
+ 				.PopupButtonContainer {
+ 					float: left;
+ 					width: 40%;
+ 					margin: 0 auto;
+ 					margin-top: 2.0em;
+ 					padding: 1.0em;
+ 				}
+ 			}
+ 			
+ 			&.Email {
+ 				background: #fff;
+ 				border-color: #c9c9c9;
+ 				height: 420px;
+ 				width: 500px;
+ 				
+ 				.PopupQuestion {
+ 					color: #000;
+ 					font-weight: bold;
+ 					font-size: 1.2em;
+ 					text-shadow: 0 1px #fff;
+ 				}
+ 				
+ 				.PopupButtonContainer {
+ 					float: right;
+ 					width: 40%;
+ 					margin: 0 auto;
+ 					margin-top: 1.0em;
+ 					padding: 1.0em;
+ 					
+ 					
+ 					.Submit {
+ 						padding-top: 1.5em;
+ 						padding-bottom: 1.5em;
+ 					}
+ 					
+ 					.Delete {
+ 						font-size: 0.6em;
+ 						margin-top: 1.2em;
+ 					}
+ 				}
+ 			}
+ 			
+ 			&.Warning {
+ 				.gradient(#f5f5f5, #fcd523);
+ 				border-color: #ffb326;
+ 			
+ 				.PopupQuestion {
+ 					color: #111;
+ 					font-weight: bold;
+ 					font-size: 1.2em;
+ 					text-shadow: 0 1px #fff;
+ 				}
+ 			
+ 				.PopupButtonContainer {
+ 					width: 40%;
+ 					margin: 0 auto;
+ 					margin-top: 2.0em;
+ 					padding: 1.0em;
+ 				}
+ 			}
+ 			
+ 			&.Details {
+ 				.gradient(#f5f5f5, #fff);
+ 				border-color: #c9c9c9;
+ 				height: 400px;
+ 				overflow: auto;
+ 			
+ 				.PopupQuestion {
+ 					color: #111;
+ 					font-weight: bold;
+ 					font-size: 1.2em;
+ 					text-shadow: 0 1px #fff;
+ 				}
+ 			
+ 				.PopupButtonContainer {
+ 					width: 40%;
+ 					margin: 0 auto;
+ 					margin-top: 2.0em;
+ 					padding: 1.0em;
+ 				}
+ 			}
+ 		}
+ 	}
+}

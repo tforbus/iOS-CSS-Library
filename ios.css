@@ -1,0 +1,691 @@
+/* ----------------------------------------------------------------------------
+  * Mix-Ins
+  * ------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------
+  * Global views
+  * ------------------------------------------------------------------------- */
+body {
+  background-color: #dddddd;
+  background-image: url('priority-images/light_toast.png');
+  color: #111;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+  font-weight: none;
+  margin: 0;
+  padding: 0;
+}
+input {
+  background: inherit;
+  border: 0;
+  font-size: 1.0em;
+  padding: 0.2em;
+}
+.Section {
+  background: inherit;
+  padding: 0;
+  width: 100%;
+  /* Section header */
+
+  /* Subsection title */
+
+  /* Smaller Text */
+
+}
+.Section h1 {
+  background-color: #657894;
+  background: #657894;
+  background: -moz-linear-gradient(top, #a2abdb, #657894);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#a2abdb), to(#657894));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  border-bottom: 2px ridge #657894;
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0.2em 0;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 2px #333;
+}
+.Section h2 {
+  color: #555566;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 1.0em 0 0.5em 0;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  text-shadow: 0 1px #fff;
+}
+.Section h3 {
+  color: #555566;
+  font-size: 0.9em;
+  font-weight: none;
+  padding: 0;
+  text-align: center;
+  text-shadow: 0 1px #fff;
+  width: 100%;
+}
+.Section .Content {
+  background: inherit;
+  margin: 0;
+  padding: 0 2%;
+}
+/* ----------------------------------------------------------------------------
+  * Table View
+  * ------------------------------------------------------------------------- */
+.TableView {
+  background-color: #ffffff;
+  color: #111;
+  font-weight: bold;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.TableView li {
+  border-bottom: 1px solid #e7e7e7;
+  display: block;
+  margin: 0;
+  padding: 0.6em 1.0em;
+  position: relative;
+  text-align: left;
+}
+/* ----------------------------------------------------------------------------
+  * SMS
+  * ------------------------------------------------------------------------- */
+.ChatWindow {
+  background-color: #d5e0e8;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.ChatWindow li {
+  width: 60%;
+  border-radius: 0.5em 0.5em 0.5em 0.5em;
+  -webkit-border-top-left-radius: 0.5em;
+  -webkit-border-top-right-radius: 0.5em;
+  -webkit-border-bottom-right-radius: 0.5em;
+  -webkit-border-bottom-left-radius: 0.5em;
+  -moz-border-radius: 0.5em 0.5em 0.5em 0.5em;
+  margin: 1.0em;
+  padding: 0.8em;
+  position: relative;
+  width: 60%;
+}
+.ChatWindow li p {
+  margin: 0;
+  padding: 0 0.1em;
+}
+.ChatWindow li .Name {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+.ChatWindow li:nth-child(odd) {
+  -moz-box-shadow: 2px 2px 0px #888888;
+  -webkit-box-shadow: 2px 2px 0px #888888;
+  box-shadow: 2px 2px 0px #888888;
+  background: #d6d6d6;
+  background: -moz-linear-gradient(top, #ffffff, #d6d6d6);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d6d6d6));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  float: left;
+}
+.ChatWindow li:nth-child(odd) .Name {
+  border-bottom: 2px ridge rgba(255, 255, 255, 0.5);
+}
+.ChatWindow li:nth-child(even) {
+  -moz-box-shadow: -2px 2px 0px #888888;
+  -webkit-box-shadow: -2px 2px 0px #888888;
+  box-shadow: -2px 2px 0px #888888;
+  background: #8cdb3d;
+  background: -moz-linear-gradient(top, #ffffff, #8cdb3d);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#8cdb3d));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  background-color: #8cdb3d;
+  border: 1px solid #8cdb3d;
+  float: right;
+}
+.ChatWindow li:nth-child(even) .Name {
+  border-bottom: 2px ridge rgba(160, 239, 81, 0.5);
+}
+/* ----------------------------------------------------------------------------
+ * Horizontal Options Menu
+ * ------------------------------------------------------------------------- */
+.OptionsContainer {
+  clear: both;
+  overflow: hidden;
+}
+.Options {
+  background-color: transparent;
+  color: #787878;
+  float: left;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  text-shadow: 0 1px #fff;
+}
+.Options li {
+  background: #c9c9c9;
+  background: -moz-linear-gradient(top, #fafafa, #c9c9c9);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#c9c9c9));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  border: 1px solid #bababa;
+  border-right: 0;
+  cursor: pointer;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0.8em;
+  position: relative;
+  right: 50%;
+  width: auto;
+}
+.Options li.Active {
+  background: #65a2f7;
+  background: -moz-linear-gradient(top, #3672d9, #65a2f7);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#3672d9), to(#65a2f7));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  color: #fff;
+  text-shadow: 0 1px #333;
+}
+.Options li:first-child {
+  border-radius: 0.5em 0 0 0.5em;
+  -webkit-border-top-left-radius: 0.5em;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0.5em;
+  -moz-border-radius: 0.5em 0 0 0.5em;
+  border-left: 1px solid #bababa;
+  border-right: 0;
+}
+.Options li:last-child {
+  border-radius: 0 0.5em 0.5em 0;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0.5em;
+  -webkit-border-bottom-right-radius: 0.5em;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius: 0 0.5em 0.5em 0;
+  border-right: 1px solid #bababa;
+}
+/* ----------------------------------------------------------------------------
+ * Text display
+ * Things to change per layout: widths of Label/Value
+ * ------------------------------------------------------------------------- */
+.TextInformation {
+  font-size: 1.0em;
+  list-style: none;
+  margin: 0.5em 0;
+  padding: 0;
+  position: relative;
+}
+.TextInformation li {
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+  border-bottom: 0;
+  color: #111;
+  font-size: 1.0em;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.TextInformation li:first-child {
+  border-radius: 0.5em 0.5em 0 0;
+  -webkit-border-top-left-radius: 0.5em;
+  -webkit-border-top-right-radius: 0.5em;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius: 0.5em 0.5em 0 0;
+}
+.TextInformation li:last-child {
+  border-radius: 0 0 0.5em 0.5em;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0.5em;
+  -webkit-border-bottom-left-radius: 0.5em;
+  -moz-border-radius: 0 0 0.5em 0.5em;
+  border-bottom: 1px solid #e7e7e7;
+}
+.TextInformation .Label {
+  color: #111;
+  float: left;
+  font-weight: bold;
+  margin: 2%;
+  width: 25%;
+}
+.TextInformation .Value {
+  color: #657894;
+  float: left;
+  font-weight: none;
+  margin: 2% 0;
+  width: 71%;
+}
+.TextInformation .Value .Expandable {
+  color: #657894;
+  cursor: pointer;
+  font-weight: bold;
+  float: right;
+  height: 1.0em;
+  margin-right: 0.5em;
+  text-align: center;
+}
+/* ----------------------------------------------------------------------------
+ * Round content
+ * ------------------------------------------------------------------------- */
+.RoundedArea {
+  border-radius: 0.5em 0.5em 0.5em 0.5em;
+  -webkit-border-top-left-radius: 0.5em;
+  -webkit-border-top-right-radius: 0.5em;
+  -webkit-border-bottom-right-radius: 0.5em;
+  -webkit-border-bottom-left-radius: 0.5em;
+  -moz-border-radius: 0.5em 0.5em 0.5em 0.5em;
+  background-color: #fff;
+}
+.RoundedArea p {
+  padding: 0.2em 1.0em;
+}
+/* ----------------------------------------------------------------------------
+ * Glossy Buttons
+ * ------------------------------------------------------------------------- */
+.Button {
+  border-radius: 0.5em 0.5em 0.5em 0.5em;
+  -webkit-border-top-left-radius: 0.5em;
+  -webkit-border-top-right-radius: 0.5em;
+  -webkit-border-bottom-right-radius: 0.5em;
+  -webkit-border-bottom-left-radius: 0.5em;
+  -moz-border-radius: 0.5em 0.5em 0.5em 0.5em;
+  border: 1px solid #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 0.5em;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.5);
+  width: auto;
+}
+.Delete {
+  background: #d11f28;
+  background: -moz-linear-gradient(top, #e8a7aa, #d11f28);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#e8a7aa), to(#d11f28));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  border: 1px solid #a3292f;
+  text-shadow: rgba(0, 0, 0, 0.5);
+}
+.Submit {
+  background: #1e61c7;
+  background: -moz-linear-gradient(top, #85acde, #1e61c7);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#85acde), to(#1e61c7));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  border: 1px solid #3e61c7;
+  text-shadow: rgba(0, 0, 0, 0.5);
+}
+/* ----------------------------------------------------------------------------
+ * TabBar
+ * ------------------------------------------------------------------------- */
+.TabBarContainer {
+  background-color: #111;
+}
+.TabBarContainer .TabBar {
+  background: #000000;
+  background: -moz-linear-gradient(top, #242424, #000000);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#242424), to(#000000));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  border-top: 1px solid #111;
+  overflow: hidden;
+  padding: 0.5em 0;
+}
+.TabBarContainer .TabBar .Tabs {
+  background-color: transparent;
+  color: #fff;
+  float: left;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  text-shadow: 0 1px #111;
+}
+.TabBarContainer .TabBar .Tabs li {
+  border-radius: 0.5em 0.5em 0.5em 0.5em;
+  -webkit-border-top-left-radius: 0.5em;
+  -webkit-border-top-right-radius: 0.5em;
+  -webkit-border-bottom-right-radius: 0.5em;
+  -webkit-border-bottom-left-radius: 0.5em;
+  -moz-border-radius: 0.5em 0.5em 0.5em 0.5em;
+  border: 1px solid #111;
+  cursor: pointer;
+  display: block;
+  float: left;
+  margin: 0 0.2em;
+  padding: 1.0em;
+  position: relative;
+  right: 50%;
+  width: auto;
+}
+.TabBarContainer .TabBar .Tabs li.Active {
+  background: #242424;
+  background: -moz-linear-gradient(top, #3d3d3d, #242424);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#3d3d3d), to(#242424));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  color: #fff;
+  text-shadow: 0 1px #333;
+}
+/* ----------------------------------------------------------------------------
+ * Active/Inactive display
+ * I intended this to be used for read-only data. 
+ * LiveBoolBox is intended for mutable data.
+ * ------------------------------------------------------------------------- */
+.BoolBox {
+  border-radius: 0.7em 0.7em 0.7em 0.7em;
+  -webkit-border-top-left-radius: 0.7em;
+  -webkit-border-top-right-radius: 0.7em;
+  -webkit-border-bottom-right-radius: 0.7em;
+  -webkit-border-bottom-left-radius: 0.7em;
+  -moz-border-radius: 0.7em 0.7em 0.7em 0.7em;
+  -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  backround: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 1.4em;
+  width: auto;
+  float: left;
+  margin: 0 0.4em 0 0;
+  padding: 0 0.5em;
+  position: relative;
+  font-size: 0.8em;
+  text-align: center;
+}
+.BoolBox.Yes {
+  background: #2170de;
+  background: -moz-linear-gradient(top, #4590e6, #2170de);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#4590e6), to(#2170de));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  background-color: #00ff00;
+  color: #fff;
+}
+.BoolBox.No {
+  background: #dddddd;
+  background: -moz-linear-gradient(top, #eeeeee, #dddddd);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  background-color: #ff0000;
+  color: #666;
+}
+/* ----------------------------------------------------------------------------
+ * Active/Inactive display (mutable)
+ * -------------------------------------------------------------------------- */
+.BoolBoxMutable {
+  border-radius: 0.7em 0.7em 0.7em 0.7em;
+  -webkit-border-top-left-radius: 0.7em;
+  -webkit-border-top-right-radius: 0.7em;
+  -webkit-border-bottom-right-radius: 0.7em;
+  -webkit-border-bottom-left-radius: 0.7em;
+  -moz-border-radius: 0.7em 0.7em 0.7em 0.7em;
+  -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  backround: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 1.4em;
+  width: auto;
+  float: left;
+  margin: 0 0.4em 0 0;
+  padding: 0 0.5em;
+  position: relative;
+  font-size: 0.8em;
+  text-align: center;
+}
+.BoolBoxMutable.Yes {
+  background: #2170de;
+  background: -moz-linear-gradient(top, #4590e6, #2170de);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#4590e6), to(#2170de));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  background-color: #00ff00;
+  color: #fff;
+}
+.BoolBoxMutable.Yes .Slider {
+  background: #f5f5f5;
+  background: -moz-linear-gradient(top, #e7e7e7, #f5f5f5);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#e7e7e7), to(#f5f5f5));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  border-radius: 50% 50% 50% 50%;
+  -webkit-border-top-left-radius: 50%;
+  -webkit-border-top-right-radius: 50%;
+  -webkit-border-bottom-right-radius: 50%;
+  -webkit-border-bottom-left-radius: 50%;
+  -moz-border-radius: 50% 50% 50% 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 1.5em;
+  position: absolute;
+  right: -0.25em;
+  top: -0.25em;
+  width: 1.5em;
+}
+.BoolBoxMutable.No {
+  background: #dddddd;
+  background: -moz-linear-gradient(top, #eeeeee, #dddddd);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  background-color: #ff0000;
+  color: #666;
+}
+.BoolBoxMutable.No .Slider {
+  background: #f5f5f5;
+  background: -moz-linear-gradient(top, #e7e7e7, #f5f5f5);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#e7e7e7), to(#f5f5f5));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  border-radius: 50% 50% 50% 50%;
+  -webkit-border-top-left-radius: 50%;
+  -webkit-border-top-right-radius: 50%;
+  -webkit-border-bottom-right-radius: 50%;
+  -webkit-border-bottom-left-radius: 50%;
+  -moz-border-radius: 50% 50% 50% 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 1.5em;
+  position: absolute;
+  left: -0.25em;
+  top: -0.25em;
+  width: 1.5em;
+}
+/* ----------------------------------------------------------------------------
+ * Popup
+ * -------------------------------------------------------------------------- */
+.PopupContainer {
+  background: rgba(0, 0, 0, 0.5);
+  display: table;
+  height: 100%;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.PopupContainer .PopupContainerInner {
+  display: table-cell;
+  vertical-align: middle;
+}
+.PopupContainer .PopupContainerInner .Popup {
+  border-radius: 1em 1em 1em 1em;
+  -webkit-border-top-left-radius: 1em;
+  -webkit-border-top-right-radius: 1em;
+  -webkit-border-bottom-right-radius: 1em;
+  -webkit-border-bottom-left-radius: 1em;
+  -moz-border-radius: 1em 1em 1em 1em;
+  background-color: #e7e7e7;
+  border: 2px solid #fff;
+  height: 150px;
+  margin: 0 auto;
+  padding: 1.5em;
+  text-align: center;
+  width: 350px;
+}
+.PopupContainer .PopupContainerInner .Popup.Delete {
+  background: #ff9187;
+  background: -moz-linear-gradient(top, #f5f5f5, #ff9187);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#ff9187));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  border-color: #cc0000;
+}
+.PopupContainer .PopupContainerInner .Popup.Delete .PopupQuestion {
+  color: #111;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-shadow: 0 1px #fff;
+}
+.PopupContainer .PopupContainerInner .Popup.Delete .PopupButtonContainer {
+  float: left;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 2.0em;
+  padding: 1.0em;
+}
+.PopupContainer .PopupContainerInner .Popup.Email {
+  background: #fff;
+  border-color: #c9c9c9;
+  height: 420px;
+  width: 500px;
+}
+.PopupContainer .PopupContainerInner .Popup.Email .PopupQuestion {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-shadow: 0 1px #fff;
+}
+.PopupContainer .PopupContainerInner .Popup.Email .PopupButtonContainer {
+  float: right;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 1.0em;
+  padding: 1.0em;
+}
+.PopupContainer .PopupContainerInner .Popup.Email .PopupButtonContainer .Submit {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+.PopupContainer .PopupContainerInner .Popup.Email .PopupButtonContainer .Delete {
+  font-size: 0.6em;
+  margin-top: 1.2em;
+}
+.PopupContainer .PopupContainerInner .Popup.Warning {
+  background: #fcd523;
+  background: -moz-linear-gradient(top, #f5f5f5, #fcd523);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#fcd523));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  border-color: #ffb326;
+}
+.PopupContainer .PopupContainerInner .Popup.Warning .PopupQuestion {
+  color: #111;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-shadow: 0 1px #fff;
+}
+.PopupContainer .PopupContainerInner .Popup.Warning .PopupButtonContainer {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 2.0em;
+  padding: 1.0em;
+}
+.PopupContainer .PopupContainerInner .Popup.Details {
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #f5f5f5, #ffffff);
+  /* Mozilla: */
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#ffffff));
+  /* Chrome, Safari:*/
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@from', endColorstr='@to',GradientType=0 );
+  border-color: #c9c9c9;
+  height: 400px;
+  overflow: auto;
+}
+.PopupContainer .PopupContainerInner .Popup.Details .PopupQuestion {
+  color: #111;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-shadow: 0 1px #fff;
+}
+.PopupContainer .PopupContainerInner .Popup.Details .PopupButtonContainer {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 2.0em;
+  padding: 1.0em;
+}
